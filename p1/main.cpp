@@ -25,7 +25,7 @@ void btnfallirq()
         else
         {
             flag = 1;
-            startFlag.attach(tm, 100ms);
+            startFlag.attach(tm, 10ms);
         }
         Debounce.reset();
     }
@@ -42,7 +42,7 @@ int main()
 
     while (1)
     {
-        uLCD.printf("\r%d:%d:%d", cnt / 600, (cnt / 10) % 60, cnt % 10);
+        uLCD.printf("\r%d:%d:%d", cnt / 6000, (cnt / 100) % 60, cnt % 100);
         //ThisThread::sleep_for(50ms);
     }
 }
