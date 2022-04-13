@@ -20,7 +20,7 @@ void wavegen()
       	if (cnt >= 1.0)//0 ~ n-1
         {
             cnt = 0.0;
-            //printfQueue.call(printf, "One period is over\n");
+            printfQueue.call(printf, "One period is over\n");
         }
             
         
@@ -28,8 +28,6 @@ void wavegen()
             OutSig = 3.0 * tanh(cnt * 6);
         else
             OutSig = 3.0 * (1 - tanh(cnt * 6 - 3));
-        
-        //printf("%f\n", OutSig);
         
         ThisThread::sleep_for(1ms);
 	}
